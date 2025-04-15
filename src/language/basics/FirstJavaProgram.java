@@ -1,4 +1,4 @@
-package com.ba.creatio.crm.language.basics;
+package language.basics;
 
 public class FirstJavaProgram {
 
