@@ -3,11 +3,13 @@ package language.basics;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Hashtable;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class CollectionsPractice {
@@ -103,11 +105,11 @@ public class CollectionsPractice {
 		studentHashmap.put("Guna",120);
 	//	studentHashmap.put("Guna",012);
 		studentHashmap.put("Tamizh",345);
-		studentHashmap.put("NUL",678);
+		studentHashmap.put(null,678);
 		studentHashmap.put("Jack",null);
 		studentHashmap.remove("Bharath");
 
-	 //   System.out.println(studentTreeSet.get(1));
+	//    System.out.println(studentHashmap.get(1));
 		System.out.println(studentHashmap.size());
 		System.out.println(studentHashmap);
 		
@@ -121,13 +123,48 @@ public class CollectionsPractice {
 		studentLinkedHashmap.put("Guna",120);
 	//	studentLinkedHashmap.put("Guna",012);
 		studentLinkedHashmap.put("Tamizh",345);
-		studentLinkedHashmap.put("NUL",678);
+		studentLinkedHashmap.put(null,678);
 		studentLinkedHashmap.put("Jack",null);
 		studentLinkedHashmap.remove("Bharath");
 
 	 //   System.out.println(studentLinkedHashmap.get(1));
 		System.out.println(studentLinkedHashmap.size());
-		System.out.println(studentLinkedHashmap);
+		System.out.println(studentLinkedHashmap); 
+		
+		//TreeMap -> single value
+		// its allow NULL value,not allow NULL as Key, Ascending order,get not work 
+				
+		Map<String,Integer> studentTreemap=new TreeMap<String,Integer>();
+		studentTreemap.put("Bharath",123);
+		studentTreemap.put("Tamizh",456);
+		studentTreemap.put("Gokul",789);
+		studentTreemap.put("Guna",120);
+	//	studentLinkedHashmap.put("Guna",012);
+		studentTreemap.put("Tamizh",345);
+	//	studentTreemap.put(null,678);
+		studentTreemap.put("Jack",null);
+		studentTreemap.remove("Bharath");
+
+	//    System.out.println(studentTreemap.get(1));
+		System.out.println(studentTreemap.size());
+		System.out.println(studentTreemap); 
+				
+		//HashTable -> single value
+		// its not allow NULL value and Key, random order,get not work 
+						
+		Map<String,Integer> studenthashtable=new Hashtable<String,Integer>();
+		studenthashtable.put("Bharath",123);
+		studenthashtable.put("Tamizh",456);
+		studenthashtable.put("Gokul",789);
+		studenthashtable.put("Guna",120);
+	//  studenthashtable.put("Guna",012);
+		studenthashtable.put("Tamizh",345);
+//		studenthashtable.put(null,678);
+//		studenthashtable.put("Jack",null);
+		studenthashtable.remove("Bharath");
+
+		System.out.println(studenthashtable.size());
+		System.out.println(studenthashtable);
+			}
 	}
 
-}

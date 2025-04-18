@@ -3,7 +3,10 @@ package assignments;
 public class Assignment6_Operator {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		/*Create two arrays to store student names ["Suresh","Mahesh","Naresh"] and
+		marks [75, 80, 82] Add 10 marks to each students using assignment operators and
+		store it into another array, after adding 10 marks identify the average marks of all
+		students */
 		
 		String[] subject= new String[3];
 		subject[0]="Suresh";
