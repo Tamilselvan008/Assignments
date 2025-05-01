@@ -7,7 +7,7 @@ public class Assignment8_Loop {
 
 	public static void main(String[] args) {
 	
-		List<Integer> CreditList=new ArrayList<Integer>();
+	/*	List<Integer> CreditList=new ArrayList<Integer>();
 		CreditList.add(50000);
 		CreditList.add(3000);
 		CreditList.add(4000); 
@@ -62,7 +62,51 @@ public class Assignment8_Loop {
 	    System.out.println("Overall debit count: "+numbersofdebit);
 	    System.out.println("Total Suspicious count: "+(creditSuspicious+debitSuspicious));
 	    System.out.println("Total Transaction: "+(numbersofcredit+numbersofdebit));
-	     
+	 */    
+		
+		// After Bharath Comment Updated the Code:
+		
+		List<Integer> overallList=new ArrayList<Integer>(); 
+		overallList.add(50000);
+		overallList.add(3000);
+		overallList.add(4000); 
+		overallList.add(-2000);
+		overallList.add(-15000);
+		overallList.add(-200);
+		overallList.add(-300);
+		overallList.add(-3000);   
+		
+		int totalcredit=0;
+		int totaldebit=0;
+		int numbersofcredit=0;
+		int creditSuspicious=0;
+		int debitcount=0;
+		int creditcount=0;
+		
+
+           for(Integer creditanddebit:overallList) {  
+        	   numbersofcredit++;	
+			 if((creditanddebit>=10000 ||creditanddebit <=-10000)) {
+				System.out.println("Suspicious credit transaction with Amount: "+creditanddebit);
+				creditSuspicious++;
+			} if(creditanddebit> 0 ) {
+				totalcredit +=creditanddebit; 
+				creditcount++;
+			}else if(creditanddebit< 0) {
+				 totaldebit  -=creditanddebit;
+				 debitcount++;
+			}			
+			 
+		} 
+             System.out.println("Total Credit Amount: "+totalcredit);
+             System.out.println("Overall Credit count: "+creditcount);
+			 System.out.println("Total debit Amount: "+totaldebit); 
+			 System.out.println("Overall debit count: "+debitcount);
+			 System.out.println("Overall transaction count: "+numbersofcredit);
+					
+			    
+			 System.out.println("Total Suspicious count: "+creditSuspicious);
+			 System.out.println("Balance amount in account: "+(totalcredit-totaldebit));
  
 	}
 
